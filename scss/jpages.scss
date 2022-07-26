@@ -1,0 +1,392 @@
+@import "vars";
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --body-font-family: "Inter", sans-serif;
+  --body-font-size: 16px;
+  --body-line-height: 1.625;
+  --body-font-weight: 400;
+  --body-color-text: #212529;
+  --heading-font-family: "Glegoo", serif;
+}
+
+
+html,body {
+  height: 100%;
+}
+
+body {
+  color: var(--body-color-text);
+  font-family: var(--body-font-family);
+  font-weight: var(--body-font-weight);
+  font-size: var(--body-font-size);
+  line-height: var(--body-line-height);
+  margin: 0;
+}
+
+strong {
+  font-weight: 500;
+}
+
+h1, h2, h3, h4, h5, h6,label, .error-code {
+  color: $headings-color;
+}
+
+pre,
+code {
+  color: #e83e8c;
+  font-family: Consolas, monaco, monospace;
+}
+
+.alert {
+  background-color: $gray-200;
+  border: 1px solid rgba($black, 0.1);
+  border-radius: 5px;
+  margin-bottom: $spacer;
+  padding: $spacer/2;
+  position: relative;
+
+  .close {
+    border: 1px solid rgba($black, 0.1%);
+    border-radius: 3px;
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    position: absolute;
+    right: $spacer/2;
+    top: $spacer/2;
+    text-align: center;
+    width: 20px;
+
+    &:hover, &:focus, &:active {
+      cursor: pointer;
+    }
+  }
+
+  h4 {
+    margin: 0;
+  }
+
+  &.alert-warning {
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+    color: #856404;
+  }
+
+  &.alert-message {
+    background-color: #cce5ff;
+    border-color: #b8daff;
+    color: #004085;
+  }
+}
+
+// 
+// T4 ERROR PAGE
+// ------------------------
+.t4-error-page {
+  background-color: $white;
+
+  h1 {
+    margin: 0 0 $spacer;
+    font-size: 1.333rem;
+
+    @media screen and (min-width: 768px) {
+      font-size: 1.733rem;
+    }
+  }
+
+  .t4-error-msg {
+    background-color: $white;
+    box-shadow: 0 3px 3px rgba(0,0,0, 0.075);
+    border-radius: 7px;
+    padding: $spacer*2;
+    margin: 0 $spacer;
+    min-height: 180px;
+    margin-top: calc(100vh / 2);
+    max-width: 576px;
+    position: relative;
+    text-align: center;
+    transform: translateY(-50%);
+
+    @media screen and (min-width: 768px) {
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: $spacer*8;
+      text-align: left;
+    }
+  }
+
+  img {
+    opacity: .1;
+    margin: 0 auto;
+    width: $spacer*5;
+
+    @media screen and (min-width: 768px) {
+      position: absolute;
+      left: $spacer*2;
+      top: $spacer*2.5;
+      margin: 0;
+    }
+  }
+
+  .error-message {
+    margin-top: 0;
+    margin-bottom: $spacer*2;
+  }
+
+  code {
+    background-color: #FEF3F8;
+    border-radius: 3px;
+    color: #e83e8c;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9333rem;
+    padding: 0 5px;
+  }
+
+  .cta-wrap {    
+    h3 {
+      color: $gray-600;
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 1px;
+      margin: 0 0 $spacer/2 0;
+      text-transform: uppercase;
+
+      @media screen and (min-width: 768px) {
+        display: inline-block;
+        margin: 0 $spacer/2 0 0;
+      }
+    }
+
+    a {
+      background: $gray-200;
+      border-radius: 25px;
+      color: $gray-700;
+      display: inline-block;
+      font-size: 0.8rem;
+      margin: 5px $spacer/4;
+      letter-spacing: 1px;
+      padding: $spacer/3 $spacer;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.25s ease-in;
+
+      &:hover, &:focus, &:active {
+        background-color: $blue;
+        color: $white;
+      }
+    }
+  }
+}
+
+
+// OFFLINE PAGE
+// -------------------------------
+.offline {
+  align-items: center;
+  display: flex;
+  min-height: 600px;
+
+  // Wrap
+  .outline {
+    width: 480px;
+    margin: 0 auto;
+  }
+  
+  // Form
+  .form-wrap {
+  
+    // Box Header
+    .offline-header {
+      padding: $grid-gutter-width;
+  
+      // Logo University
+      .offline-image {
+        text-align: center;
+        margin-bottom: $spacer;
+      }
+  
+      // Title
+      h1 {
+        color: var(--color-primary);
+        font: 700 var(--h2-font-size) / var(--heading-h2-line-height) var(--heading-font-family) ;
+        text-align: center;
+        margin: 0 0 $spacer;
+      }
+  
+      // Message
+      .offline-message {
+        text-align: center;
+        font-size: var(--h6-font-size);
+        line-height: var(--heading-h6-line-height);
+        margin-bottom: 0;
+      }
+    }
+  
+    // Form login
+    #form-login {
+      padding: 0 $grid-gutter-width $grid-gutter-width;
+  
+      fieldset {
+        border: 0;
+        margin: 0;
+        padding: 0;
+      }
+  
+      #form-login-username,
+      #form-login-password,
+      #form-login-secretkey {
+        margin: 0 0 $spacer;
+  
+        // Label
+        label {
+          display: block;
+          margin-bottom: $spacer/4;
+          font: 700 var(--h5-font-size)/var(--heading-h5-line-height) var(--heading-font-family);
+        }
+  
+        //Input
+        input {
+          background-color: $white ;
+          border: $input-btn-border-width solid $input-border-color;
+          color: $input-color;
+          display: block;
+          font-size: $input-btn-font-size;
+          padding: $input-btn-padding-y $input-btn-padding-x;
+          line-height: $input-btn-line-height;
+          max-width: none;
+          transition: all 0.25s;
+          width: 100%;
+  
+          &:focus {
+            border-color: var(--color-primary) ;
+            border-radius: 0;
+            outline: none;
+          }
+        }
+      }
+  
+      // Buttton submit
+      #submit-buton {
+        padding-top: $spacer;
+      }
+  
+      input[type="submit"] {
+        background-color: $primary;
+        box-shadow: none;
+        border: $input-btn-border-width solid $primary;
+        color: $white;
+        display: block;
+        font: 700 var(--h5-font-size) / var(--heading-h5-line-height) var(--heading-font-family);
+        padding: $input-btn-padding-y $input-btn-padding-x;
+        text-align: center;
+        text-transform: uppercase;
+        transition: all 0.25s;
+        text-shadow: none;
+        width: 100%;
+  
+        &:hover, &:focus, &:active {
+          opacity: 0.85;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+// ERROR PAGE
+// -------------------------------
+.error-page {
+  display: flex;
+  overflow-x: hidden;
+  margin: 0;
+
+  // Wrap
+  .error-page-wrap {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    max-width: 100%;
+    padding: $grid-gutter-width;
+    text-align: center;
+    width: 800px;
+  }
+
+  // Info
+  .error-info {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    // Error Code
+    .error-code {
+      font: 600 20rem/19rem var(--body-font-family);
+      letter-spacing: -0.06em;
+
+      // Mobile View
+      @include media-breakpoint-down(sm) {
+        font-size: 10rem;
+        line-height: 10rem;
+      }
+    }
+  
+    // Error Messaage
+    .error-msg {
+      h2 {
+        font : 400 2.625rem/3.25rem var(--heading-font-family) ;
+        margin: 0 0 $spacer/2;
+        
+        @include media-breakpoint-down(sm) {
+          font-size: 2rem;
+        }
+      }
+    }
+
+  }
+
+  // Other Info
+  .error-other-info {
+
+    // Description
+    p {
+      margin: 0;
+      strong {
+        font-weight: var(--body-font-weight);
+      }
+    }
+
+    // Redirect
+    .page-redirect {
+      padding-top: $spacer*2;
+
+      a {
+        background-color: $primary;
+        border: $input-btn-border-width solid $primary;
+        color: $white;
+        display: inline-block;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all 0.35s;
+        padding: $input-btn-padding-y $input-btn-padding-x;
+        font: 700 0.875rem/1.5rem var(--heading-font-family) ;
+
+        // Icon
+        &::after {
+          content: "\f105";
+          font-family: "Font Awesome\ 5 Free" ;
+          margin-left: $spacer/2;
+        }
+
+        &:hover, &:focus, &:active {
+          opacity: 0.85;
+        }
+      }
+    }
+  }
+} 

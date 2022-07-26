@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <title>CTA</title>
+	<sampledata></sampledata>
+	<fields name="cta-intro">
+		<fieldset name="basic" label="CTA_BASIC_LABEL" description="CTA_BASIC_DESC">
+			<field name="columns" type="list" label="CTA_COLUMNS_LABEL" description="CTA_COLUMNS_DESC" >
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+			</field>
+		</fieldset>
+			
+		<fieldset name="section-cta" label="CTA_SECTION_LABEL" description="CTA_SECTION_DESC" multiple="1">
+			<field name="ft-bg-color" type="list" default="primary" label="CTA_BACKGROUND_COLOR_LABEL" description="CTA_BACKGROUND_COLOR_DESC">	
+				<option value="info">Info</option>
+				<option value="primary">Primary</option>
+				<option value="secondary">Secondary</option>
+				<option value="success">Success</option>
+			</field>
+			<field name="title" type="text" default="" size="40" label="CTA_TITLE_LABEL" description="CTA_TITLE_DESC" required="1" />
+			<field name="description" type="textarea" default="" label="CTA_DESCRIPTION_LABEL" description="CTA_DESCRIPTION_DESC" rows="5" cols="40" />
+			<field name="link" type="text" default="" label="CTA_LINK_LABEL" description="CTA_LINK_DESC" rows="5" cols="40" />
+			<field name="ft-btn-title" type="text" size="40" default="" label="CTA_BTN_TITLE_LABEL" description="CTA_BTN_TITLE_DESC" />
+				
+		</fieldset>
+		
+  </fields>
+</form>

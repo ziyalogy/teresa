@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <title>Features Intro Style 1</title>
+	<sampledata></sampledata>
+	<fields name="features-intro">
+		<fieldset name="basic" label="FEATURES_BASIC_LABEL" description="FEATURES_BASIC_DESC">
+			<field name="desc" type="textarea" label="FEATURES_DESCRIPTIONS_LABEL" description="FEATURES_DESCRIPTIONS_DESC" />
+
+			<field name="columns" type="list" label="FEATURES_COLUMNS_LABEL" description="FEATURES_COLUMNS_DESC" >
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+			</field>
+
+			<field name="align" type="list" default="left" label="FEATURES_ALIGN_LABEL" description="FEATURES_ALIGN_DESC" >
+				<option value="left">Left</option>
+				<option value="center">Center</option>
+			</field>
+		</fieldset>
+			
+		<fieldset name="section-features" label="FEATURES_SECTION_LABEL" description="FEATURES_SECTION_DESC" multiple="1">
+				<field name="img-icon" type="media" default="" label="FEATURES_IMAGE_LABEL" description="FEATURES_IMAGE_DESC"  />
+				<field name="img-mask" type="media" default="" label="FEATURES_IMAGE_MASK_LABEL" description="FEATURES_IMAGE_MASK_DESC"  />
+				<field name="title" type="text" default="" size="40" label="FEATURES_TITLE_LABEL" description="FEATURES_TITLE_DESC" required="1" />
+				<field name="description" type="textarea" default="" label="FEATURES_DESCRIPTION_LABEL" description="FEATURES_DESCRIPTION_DESC" rows="5" cols="40" />
+				<field name="link" type="text" default="" label="FEATURES_LINK_LABEL" description="FEATURES_LINK_DESC" rows="5" cols="40" />
+				<field name="ft-btn-title" type="text" size="40" default="" label="FEATURES_BTN_TITLE_LABEL" description="FEATURES_BTN_TITLE_DESC" />
+				<field name="ft-btn-color" type="list" default="primary" label="FEATURES_BTN_TYPE_COLOR_LABEL" description="FEATURES_BTN_TYPE_COLOR_DESC">	
+					<option value="info">Info</option>
+					<option value="primary">Primary</option>
+					<option value="secondary">Secondary</option>
+					<option value="success">Success</option>
+				</field>
+		</fieldset>
+		
+  </fields>
+</form>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<title>Statistics Style 1</title>
+	<sampledata><![CDATA[]]></sampledata>
+
+    <fields name="statistics">
+    	<fieldset name="statistics-basic" label="CLIENTS_BASIC_LABEL" description="CLIENTS_BASIC_DESC">
+
+	      <field name="columns" type="list" label="STATISTICS_COLUMNS_LABEL" description="STATISTICS_COLUMNS_DESC">
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="6">6</option>
+				</field>
+
+				<field name="statistics-desc" type="textarea" default="" label="STATISTICS_DESCRIPTIONS_LABEL" description="STATISTICS_DESCRIPTIONS_DESC"/>
+
+				<field name="color-count" type="list" default="primary" label="STATISTICS_COLOR_COUNT_LABEL" description="STATISTICS_COLOR_COUNT_DESC">
+					<option value="primary">Primary</option>
+					<option value="secondary">Secondary</option>
+					<option value="info">Info</option>
+					<option value="warning">Warning</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="statistics-box" label="STATISTICS_BOX_LABEL" description="STATISTICS_BOX_DESC">
+				<field name="data-style-1" type="jalist">
+					<item name="stats-count" type="text" default="" label="STATISTICS_COUNT_LABEL" description="STATISTICS_COUNT_DESC" required="1" />
+					<item name="stats-name" type="text" default="" label="STATISTICS_NAME_LABEL" description="STATISTICS_NAME_DESC" />
+					<item name="stats-desc" type="text" default="" label="STATISTICS_INFO_LABEL" description="STATISTICS_INFO_DESC" />
+				</field>
+			</fieldset>
+    </fields>
+</form>

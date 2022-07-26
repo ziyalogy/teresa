@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <title>Testimonial Style 1</title>
+	<sampledata></sampledata>
+	<fieldset name="testimonial-opt" label="TESTIMONIAL_BASIC_LABEL" description="TESTIMONIAL_BASIC_DESC">
+		<field name="num-items" type="list" default="false" label="TESTIMONIAL_NUM_COLS_TITLE" description="TESTIMONIAL_NUM_COLS_DES">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+		</field>
+
+		<field name="autoplay" type="list" default="false" label="TESTIMONIAL_AUTOPLAY_TITLE" description="TESTIMONIAL_AUTOPLAY_DES">
+			<option value="true">JYES</option>
+			<option value="false">JNO</option>
+		</field>
+
+		<field name="auto-time" type="text" default="5000" label="TESTIMONIAL_AUTOPLAY_TIME_TITLE" description="TESTIMONIAL_AUTOPLAY_TIME_DESC"></field>
+	</fieldset>
+	<fields name="testimonial-intro">	
+		<fieldset name="section-features" label="TESTIMONIAL_SECTION_LABEL" description="TESTIMONIAL_SECTION_DESC">
+			<field name="data" type="jalist" >
+				<item name="desc" type="textarea" default="" label="TESTIMONIAL_TEXT_LABEL" description="TESTIMONIAL_TEXT_DESC" rows="5" cols="40" required="1" />
+				<item name="author" type="textarea" default="" label="TESTIMONIAL_AUTHOR_LABEL" description="TESTIMONIAL_AUTHOR_DESC" rows="5" cols="40" />
+			</field>
+
+		</fieldset>
+		
+  </fields>
+</form>

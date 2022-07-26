@@ -1,0 +1,177 @@
+// ------------------------------------
+// FORMS
+// ------------------------------------
+
+// Extend style in base
+// --------------------
+@import "../../../plugins/system/t4/themes/base/scss/_forms";
+
+// 
+// Button
+// -----------------------------------
+.btn {
+	font-family: var(--heading-font-family);
+	text-transform: uppercase;
+}
+
+.btn-arrow-right {
+	&:after {
+		content: "\f105";
+		font-family: 'Font Awesome 5 Free';
+		font-weight: 900;
+		margin-left: 5px;
+		position: relative;
+	}
+}
+
+@each $color, $value in $theme-colors {
+  .btn.btn-outline-#{$color} {
+  	position: relative;
+  	overflow: hidden;
+  	z-index: 1;
+  	transition: none;
+
+  	// Effect
+    &:before {
+      display: block;
+      content: '';
+      position: absolute;
+      z-index: -1;
+      transition: all 0.4s;
+      transform: translateX(-50%) translateY(-50%) rotate(45deg);
+      width: 100%;
+      height: 0;
+      top: 50%;
+      left: 50%;
+      background: $value;
+      opacity: 0;
+    }
+
+    &:hover,&:focus,&:active {
+    	background: transparent!important;
+      color: $white !important;
+
+    	&:before {
+    		height: 800%;
+    		opacity: 1;
+    	}
+    }
+  }
+}
+
+.btn {
+  &.btn-outline-light {
+    &:hover,&:focus,&:active {
+      color: $gray-900!important;
+    }
+  }
+}
+// Textual form controls
+// -----------------------------------
+
+// Control Group 
+div.control-group {
+  margin-bottom: $spacer !important;
+}
+
+// Input
+input.form-control {
+  border: $input-btn-border-width solid $input-border-color;
+  border-radius: $input-border-radius;
+  color: $input-color !important;
+  font: var(--h6-font-size)/24px $input-btn-font-family;
+
+  &:focus{
+    border-color: var(--color-primary);
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+// Label
+.control-label {  
+  color: var(--mainnav-text-color);
+  .form-control-feedback {
+    padding: $grid-gutter-width/4 $grid-gutter-width/2;
+    color: var(--color-secondary);
+  }
+
+  label {
+    font-weight: 700; 
+    font-size: var(--h5-font-size);
+    font-family: var(--heading-font-family) ;
+    line-height: var(--heading-h5-line-height) ;
+    margin-bottom: 4px;
+  }
+}
+
+// 
+// Input group
+// ---------------------------
+.input-group-addon {
+  > span {
+  }
+}
+
+
+// 
+// Btn Toolbar
+// --------------------------
+.btn-toolbar {
+  float: right;
+  position: absolute;
+  right: 0;
+  top: 0.25rem;
+
+  // Mobile View 
+  @include media-breakpoint-down(sm) {
+    position: relative;
+    top: 0;
+    right: 0;
+    float: unset;
+  }
+
+  a{
+    color: var(--color-secondary);
+    background-color: $white !important;
+    border-color: $secondary ;
+
+    &:hover, &:focus {
+      color: $white;
+      background-color: var(--color-secondary) !important;
+    }
+  }
+}
+
+// base-style
+.base-style {
+  background-color: red;
+}
+
+// form-horizontal
+form.form-horizontal.form-horizontal {
+  // Mobile view
+  @include media-breakpoint-down(sm) {
+    .control-group {
+      .control-label {
+        float: none;
+      }
+      
+      .controls {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+
+.custom-select {
+  appearance: auto !important;
+  border-radius: $border-radius;
+  border: 2px solid $border-color;
+  margin-bottom: $spacer/2;
+  &:focus {
+    border: 2px solid var(--color-primary);
+    outline: none;
+  }
+}

@@ -1,0 +1,303 @@
+// 
+// Main Navigation
+// -----------------------------------
+
+// Toggle button
+.navbar-toggler {
+  background: var(--color-primary);
+  border-radius: 0;
+  border: 0;
+  color: $white;
+  display: block;
+  padding: 0;
+  line-height: $input-height;
+  height: $input-height;
+  min-width: $input-height;
+  font-size: $input-btn-font-size;
+  line-height: var(--body-line-height);
+  transition: all 0.35s ease-in-out;
+
+  i {
+    font-size: 22px;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.85;
+  }  
+}
+
+.t4-navbar {
+  position: relative;
+  padding: 0;
+  @include clearfix();
+
+  .navbar {
+    float: left;
+
+    &.navbar-expand {
+      @each $breakpoint in map-keys($grid-breakpoints) {
+        $next: breakpoint-next($breakpoint, $grid-breakpoints);
+        $infix: breakpoint-infix($next, $grid-breakpoints);
+
+        &#{$infix} {
+          @include media-breakpoint-down($breakpoint) {
+            float: none;
+            display: block;
+            @include clearfix();
+          }        
+        }
+      }    
+    }
+  }
+
+  // Dropdown
+  .dropdown-item {
+    &.dropdown-toggle {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        right: $spacer;
+        top: 50%;
+        margin-top: -2px;
+      }
+    }
+  }
+
+  .nav-item {
+    position: relative;
+  }
+}
+ 
+@include media-breakpoint-up(md) {
+  #t4-navbar-collapse {
+    display: block !important;
+  }
+
+  .navbar-expand-lg #t4-navbar-collapse {
+    display: flex !important;
+  }
+}
+
+// Show toggler button
+.navbar-expand {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $next: breakpoint-next($breakpoint, $grid-breakpoints);
+    $infix: breakpoint-infix($next, $grid-breakpoints);
+
+    @include media-breakpoint-up($breakpoint) {
+      .navbar-toggler {
+        display: none;
+      }
+    }
+  }
+}
+
+
+//
+// The Nav
+.t4-main-nav {
+  // T4: Need to make the Nav horizontal on lg media.
+  // Because Joomla! add .flex-column to the default menu module
+  @include media-breakpoint-up(lg) {
+    .navbar-nav {
+      flex-direction: row !important;
+    }
+  }
+}
+
+
+//
+// Breadcrumbs
+// -----------------------------------
+.breadcrumb {
+  background-color: transparent;
+  border-radius: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  font-family: var(--heading-font-family);
+  font-size: var(--h5-font-size);
+
+  li.breadcrumb-item {
+    &:first-child {
+      color: $gray-500;
+    }
+  }
+
+  .breadcrumb-item + .breadcrumb-item {
+    padding-left: 0;
+
+    &:before {
+      display: none;
+    }
+  }
+
+  .divider {
+    display: inline-block;
+    padding-right: $spacer/2;
+    text-align: center;
+
+    &:before {
+      color: $gray-400;
+      content: "\f105";
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      font-size: 11px;
+      position: relative;
+      top: -1px;
+      display: inline-block;
+      margin-left: 5px;
+    }
+
+    img {
+      display: none;
+    }
+  }
+
+  .icon {
+    margin-right: $spacer/2;
+  }
+}
+
+
+//
+// Pagination
+// -----------------------------------
+ul.pagination {
+  margin: $spacer-sm 0;
+  flex-wrap: wrap;
+
+  .page-link {
+    border: 1px solid $border-color;
+    color: $headings-color;
+    line-height: 46px;
+    font-weight: 700;
+    height: 48px;
+    padding: 0 0.8rem;
+    margin: 0 8px 8px 0;
+    min-width: 48px;
+    text-align: center;
+    font-family: var(--heading-font-family);
+  }
+
+  .page-link,
+  .pagenav {
+    .icon-chevron-left,
+    .icon-chevron-right {
+      font-size: $font-size-xs;
+      text-align: center;
+      margin-right: $spacer-xs;
+    }
+
+    .icon-chevron-right {
+      margin-right: 0;
+      margin-left: $spacer-xs;
+    }
+  }
+
+  // Disable
+  .disabled {
+    .page-link {
+      opacity: 0.5;
+      cursor: not-allowed;
+
+      &:hover,&:focus,&:active {
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  // Active
+  .page-item.active span {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+
+}
+
+.counter {
+  border: 1px solid $border-color;
+  color: $headings-color;
+  display: inline-block;
+  font-size: $font-size-xs;
+  font-family: var(--heading-font-family);
+  line-height: 46px;
+  margin: $spacer-sm 0;
+  height: 48px;
+  padding: 0 $grid-gutter-width / 2;
+
+  // Mobile
+  @include media-breakpoint-down(sm) {
+    order: 1;
+  }
+}
+
+.blog-pagination {
+  justify-content: space-between;
+
+  // Tablet view
+  @include media-breakpoint-down(md) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+// Navigation bar
+//-----------------------------------
+.pagenav {
+  list-style: none;
+  margin: $spacer*2 0;
+  padding: 0;
+  text-align: right;
+  @include clearfix();
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 0;
+  }
+
+  li {
+    display: inline-block;
+
+    &:first-child {
+      margin-right: $spacer/2;
+    }
+
+    &:last-child {
+      margin-left: $spacer/2;
+    }
+
+    a {
+      background-color: $gray-200;
+      color: $body-color;
+      padding: $spacer/2 $spacer;
+      &:hover, &:focus, &:active {
+        background-color: $gray-300;
+        text-decoration: none;
+      }
+    }
+
+    span:before {
+      color: $gray-700;
+      font-size: $font-size-xs;
+    }
+  }
+}
+
+// Tabs 
+// ----------------------------------
+.nav-tabs {
+  & + .tab-content {
+    padding: $spacer 0;
+  }
+
+  .nav-link.active {
+    border-bottom-color: $white;
+  }
+}

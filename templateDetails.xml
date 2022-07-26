@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension
+  version="4.0"
+  type="template"
+  method="upgrade"
+  group="template"
+  client="site"
+>
+	<name>teresa</name>
+	<version>1.0.0</version>
+	<creationDate>July 8th, 2022</creationDate>
+	<author>Ziyal Amanya</author>
+	<authorEmail>info@buildal.ug</authorEmail>
+	<authorUrl>www.buildal.ug</authorUrl>
+	<copyright>Copyright (C), Buildal Solutions Co., Ltd. All Rights Reserved.</copyright>
+	<license>license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<description>
+		<![CDATA[
+		<div align="center">
+			<div class="alert alert-success" style="background-color:#DFF0D8;border-color:#D6E9C6;color: #468847;padding: 1px 0;">
+				
+				<h4><a href="https://www.buildal.ug/work/">University and School Joomla template - Teresa</a></h4>
+				
+				<p><a href="https://www.buildal.ug/work/" title="">Home</a> | <a href="https://www.buildal.ug/work/" title="">Demo</a> | <a href="//www.buildal.ug/documentation/joomla-templates/ja-athena" title="">Document</a></p>
+
+				<p>Teresa is a perfect Joomla template for schools, colleges, universities or any educational institute's website. Supports Joomla 4, built with T4 Framework, integrates Bootstrap 5.</p>
+
+				<p><span style="color:#FF0000">Note: Teresa requires T4 plugin to be installed and enabled.</span></p>
+				<p>Copyright 2004 - 2022 <a href='http://www.buildal.ug/' title='Visit buildal.ug!'>buildal.ug</a>.</p>
+			</div>
+			<style>table.adminform{width: 100%;}</style>
+		</div>
+		]]>
+	</description>
+
+	<files>
+		<filename>helper.php</filename>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>error-t4.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>index.php</filename>
+		<filename>offline.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>templateInfo.php</filename>
+		<folder>acm</folder>
+		<folder>contenttype</folder>
+		<folder>css</folder>
+		<folder>etc</folder>
+		<folder>fonts</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+		<folder>scss</folder>
+	</files>
+	<positions>
+		<position>menu</position>
+		<position>off-canvas</position>
+		<position>search</position>
+		<position>banner</position>
+		<position>topbar</position>
+		<position>topbar-l</position>
+		<position>topbar-r</position>
+		<position>container-tab_item</position>
+		<position>masthead</position>
+		<position>hero</position>
+		<position>main-top-1</position>
+		<position>main-top-2</position>
+		<position>main-bottom-1</position>
+		<position>mega-1</position>
+		<position>mega-2</position>
+		<position>mega-3</position>
+		<position>mega-4</position>
+		<position>main-bottom-2</position>
+		<position>map</position>
+		<position>breadcrumbs</position>
+		<position>subcribe</position>
+		<position>sidebar-l</position>
+		<position>sidebar-r</position>
+		<position>section-1</position>
+		<position>section-2</position>
+		<position>section-3</position>
+		<position>section-4</position>
+		<position>section-5</position>
+		<position>section-6</position>
+		<position>section-7</position>
+		<position>section-8</position>
+		<position>section-9</position>
+		<position>section-10</position>
+		<position>bottom-a</position>
+		<position>bottom-b</position>
+		<position>bottom-c</position>
+		<position>bottom-d</position>
+		<position>footnav</position>
+		<position>footnav-1</position>
+		<position>footnav-2</position>
+		<position>footnav-3</position>
+		<position>footnav-4</position>
+		<position>footnav-5</position>
+		<position>footer</position>
+		<position>footer-logo</position>
+		<position>debug</position>
+	</positions>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_teresa.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_teresa.sys.ini</language>
+	</languages>
+	<t4>
+		<basetheme>base</basetheme>
+		<bootstrap>bs5</bootstrap>
+
+		<site>
+			<fields name="typelist-site">
+				<fieldset name="group_styles_font">
+
+	      	<field
+            name="heading_line_height"
+            class="inline"
+            type="hidden"
+            default="1.4"
+            hint="1.4"
+            label="T4_HEADING_LINE_HEIGHT_LABEL"
+            description="T4_HEADING_LINE_HEIGHT_DESC"
+          />
+
+	      	<field
+            name="heading_letter_spacing"
+            class="heading-setting col-l"
+            type="text"
+            default="0px"
+            hint="0px"
+            label="T4_HEADING_LETTER_SPACING_LABEL"
+            description="T4_HEADING_LETTER_SPACING_DESC"
+          />
+		      <field
+            name="h1_font_size"
+            class="h1-font-size heading-setting col-r"
+            type="text"
+            default="40px"
+            hint="40px"
+            label="T4_H1_FONT_SIZE_LABEL"
+            description="T4_H1_FONT_SIZE_DESC"
+          />
+		      <field
+            name="h2_font_size"
+            class="h2-font-size heading-setting col-l"
+            type="text"
+            default="32px"
+            hint="32px"
+            label="T4_H2_FONT_SIZE_LABEL"
+            description="T4_H2_FONT_SIZE_DESC"
+          />
+		      <field
+            name="h3_font_size"
+            class="h3-font-size heading-setting col-r"
+            type="text"
+            default="28px"
+            hint="28px"
+            label="T4_H3_FONT_SIZE_LABEL"
+            description="T4_H3_FONT_SIZE_DESC"
+          />
+		      <field
+            name="h4_font_size"
+            class="h4-font-size heading-setting col-l"
+            type="text"
+            default="24px"
+            hint="24px"
+            label="T4_H4_FONT_SIZE_LABEL"
+            description="T4_H1_FONT_SIZE_DESC"
+          />
+		      <field
+            name="h5_font_size"
+            class="h5-font-size heading-setting col-r"
+            type="text"
+            default="20px"
+            hint="20px"
+            label="T4_H5_FONT_SIZE_LABEL"
+            description="T4_H5_FONT_SIZE_DESC"
+          />
+		      <field
+            name="h6_font_size"
+            class="h6-font-size heading-setting col-l"
+            type="text"
+            default="16px"
+            hint="16px"
+            label="T4_H6_FONT_SIZE_LABEL"
+            description="T4_H6_FONT_SIZE_DESC"
+          />
+	      
+	    </fieldset>
+			</fields>
+		</site>
+	</t4>
+
+	<updateservers>
+    <server
+      type="extension"
+      priority="1"
+      name="T4 Blank"
+    >#</server>
+	</updateservers>
+</extension>

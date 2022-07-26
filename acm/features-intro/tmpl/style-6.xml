@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <title>Features Intro Style 6</title>
+	<sampledata></sampledata>
+	<fields name="features-intro">
+		<fieldset name="basic" label="FEATURES_BASIC_LABEL" description="FEATURES_BASIC_DESC">
+			<field name="btn-link" type="text" default="" label="FEATURES_LINK_LABEL" description="FEATURES_LINK_DESC"/>
+			<field name="btn-title" type="text" default="" label="FEATURES_LINK_TITLE_LABEL" description="FEATURES_LINK_TITLE_DESC"/>
+
+			<field name="border-style" type="list" default="1" label="FEATURES_BORDER_STYLE_LABEL" description="FEATURES_BORDER_STYLE_DESC">
+				<option value="1">Style 1</option>
+				<option value="2">Style 2</option>
+			</field>
+		</fieldset>
+
+		<fieldset name="section-features" label="FEATURES_SECTION_LABEL" description="FEATURES_SECTION_DESC" multiple="1">
+			<field name="data" type="jalist" >
+				<item name="time" type="text" default="" size="40" label="FEATURES_TIME_LABEL" description="FEATURES_TIME_DESC" required="1" />
+				<item name="img" type="media" default="" label="FEATURES_IMAGE_LABEL" description="FEATURES_IMAGE_DESC"  />
+				<item name="title" type="text" default="" label="FEATURES_TITLE_LABEL" description="FEATURES_TITLE_DESC" rows="5" cols="40" />
+				<item name="description" type="textarea" default="" label="FEATURES_DESCRIPTION_LABEL" description="FEATURES_DESCRIPTION_DESC" rows="5" cols="40" />
+			</field>
+		</fieldset>
+		
+  </fields>
+</form>

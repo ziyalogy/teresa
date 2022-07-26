@@ -1,0 +1,112 @@
+//
+// OFF-CANVAS CONTENT STYLES
+// -------------------------------------
+// Extend style in base
+// --------------------
+@import "../../../plugins/system/t4/themes/base/scss/_offcanvas";
+
+// Offcanvas toggle
+// -----------------------------------
+.t4-offcanvas-toggle {
+  background: var(--color-primary);
+  border: 0;
+  color: $white;
+  display: inline-block;
+  line-height: $input-height;
+  padding: 0;
+  height: $input-height;
+  transition: all 0.35s ease-in-out;
+  min-width: $input-height;
+
+  &:hover {
+    cursor: pointer;
+    color: $white;
+    opacity: 0.95;
+  }
+
+  > span {
+    font-size: 22px;
+  }
+
+  i {
+    font-size: 22px;
+    line-height: 1;
+  }
+}
+
+
+.t4-offcanvas {
+  // Off Canvas Header
+  // -----------------------------------
+  .t4-off-canvas-header {    
+  }
+
+  // Off Canvas Body
+  // -----------------------------------  
+  .t4-off-canvas-body {
+    .t4-module {
+      .module-inner {
+        padding: 0;
+      }
+    }
+
+    // Nav bar
+    .navbar {
+      .nav-item {
+        border-bottom: 1px solid $border-color;
+        padding: 0 $spacer*1.5;
+      }
+
+      .btn-toggle {
+        right: $spacer*1.5;
+      }
+
+      .nav-link,
+      .separator {
+        font-size: $font-size-base;
+
+        &:hover, &:focus, &:active {
+        }
+      }
+
+      // Dropdown menu
+      .dropdown-menu {
+        padding-left: 0;
+
+        .nav-item {
+          padding-left: $spacer;
+        }
+
+        .dropdown-item,
+        .nav-link {
+        }
+      }
+
+      // Drilldown effect
+      // ----------------
+      &.drilldown-effect {
+        .sub-menu-back {
+          border-top: 1px solid $border-color;
+          border-bottom: 1px solid $border-color;
+          border-radius: 0;
+          padding: 0.75rem $spacer*1.5;
+        }
+
+        .navbar-nav {
+          .nav-item {
+            .dropdown-menu .nav-item {
+              border-bottom: 1px solid $border-color;
+              padding-left: $spacer*1.5;
+              padding-right: $spacer*1.5;
+            }
+
+            .btn-toggle {
+              border-radius: 0;
+              margin-top: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
